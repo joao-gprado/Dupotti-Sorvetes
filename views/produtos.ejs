@@ -1,0 +1,50 @@
+<head>
+    <link rel="stylesheet" href="/css/produtos.css">
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+
+        <main>
+            <div class="item-pesquisa">
+                <form action="/buscarProdutos" method="get">
+                    <input class="caixa-pesquisa" type="text" name="termo" placeholder="Buscar produto...">
+                    <select name="tipo" id="botao-filtro">
+                        <option value="">Todos os Tipos</option>
+                        <% tipoProdutos.forEach(tipo=> { %>
+                            <option value="<%= tipo.nome %>">
+                                <%= tipo.nome %>
+                            </option>
+                            <% }); %>
+                    </select>
+                    <button class="botao-buscarProduto" type="submit">Buscar</button>
+                </form>
+            </div>
+
+            <div class="cards-container">
+                <% if (produtos.length> 0) { %>
+                    <% produtos.forEach(produto=> { %>
+                        <div class="card">
+                            <img src="/img/<%= produto.imagem %>" alt="<%= produto.tipo %>" class="card-image">
+                            <h3>
+                                <%= produto.descricao %>
+                            </h3>
+                            <p><strong>Sabor:</strong>
+                                <%= produto.sabor %>
+                            </p>
+                            <p><strong>Estoque:</strong>
+                                <%= produto.estoque %>
+                            </p>
+                            <p><strong>Preço:</strong> R$ <%= produto.preco.toFixed(2) %>
+                            </p>
+                        </div>
+                    <% }) %>
+                    <% } else { %>
+                        <p style="text-align: center;">Nenhum produto encontrado.</p>
+                    <% } %>
+            </div>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

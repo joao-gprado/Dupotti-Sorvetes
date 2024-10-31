@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cabecalho.css">
+    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/rodape.css"> 
+    <link rel="stylesheet" href="/css/servicos.css">
+    <link rel="shortcut icon" type="imagex/png" href="/img/icone-pagina.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Dupotti Sorvetes</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="/"><img src="/img/img-logo.png" id="logo" alt="Logo-DupottiSorvetes"></a>
+        <nav class="nav-cabecalho">
+            <a href="#">Inicio</a>
+            <a href="/produtos">Produtos</a>
+            <a href="/servicos">Serviços</a>
+            <% if(usuario){ %>
+                <div class="usuario-texto">
+                    <p>Olá, <a href="#"><%= usuario %></a></p>
+                </div>
+            <% }else{ %>
+                <div class="botao-login">
+                    <a href="/login">Login</a>
+                </div>
+                <div class="botao-cadastro">
+                    <a href="/cadastro">Cadastrar</a>
+                </div>
+            <% } %>
+        </nav>
+    </header>

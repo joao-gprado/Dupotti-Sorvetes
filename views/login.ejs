@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tela de Login</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/rodape.css">
+</head>
+<body>
+    <div class="container-fluid full-page">
+        <div class="bg-blur"></div>
+        <div class="content-wrapper">
+            <div class="left-side d-flex justify-content-center align-items-center">
+                <a href="/"><img src="/img/img-logo.png" alt="" style="display: block; margin: auto;"></a>
+            </div>
+            <div class="login-container">
+                <div class="login-card">
+                    <h2>Dupotti Sorvetes</h2>
+
+                    <form action="/logar" method="post" id="loginForm">
+                        <div class="form-group">
+                            <label for="username">Nome de Usuário</label>
+                            <input type="text" name="usuario" class="form-control" id="username" placeholder="Digite seu nome de usuário" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Senha</label>
+                            <input type="password" name="senha" class="form-control" id="password" placeholder="Digite sua senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-login btn-block">Entrar</button>
+                        <p style="margin-top: 20px; margin-bottom: 0px;">Não possui conta? <a href="/cadastro" style="color: #EF8812; text-decoration: underline;">Cadastre-se</a></p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include ('./partials/footer.ejs') %>
+</body>
+</html>

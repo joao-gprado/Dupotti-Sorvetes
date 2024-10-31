@@ -1,0 +1,84 @@
+main {
+    padding: 20px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #610165;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 0 0 23%;
+    margin: 10px;
+    height: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card-image {
+    width: 125px;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h3{
+    margin-top: 10px;
+}
+
+.card p{
+    margin-top: 5px;
+}
+
+.item-pesquisa {
+
+    text-align: center; 
+    margin-bottom: 20px;
+
+}
+
+.caixa-pesquisa {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+  
+.botao-buscarProduto {
+    background-color: #EF8812;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .5s;
+}
+  
+.botao-buscarProduto:hover {
+    background-color: #9e5d12;
+}
+
+#botao-filtro{
+    background-color: #610165;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#botao-filtro option{
+    font-weight: bold;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="/css/cadastroProdutos.css">
+</head>
+<body>
+    <div class="imgLogoNoCadastro" style="text-align: center; margin-bottom: 20px;">
+        <img src="img/img-logo.png" alt="logo-site" style="text-align: center;">
+    </div>          
+
+    <div class="container">
+        <h1>Cadastro de Produtos</h1>
+        <form method="post" action="/cadastrarProduto" enctype="multipart/form-data">
+            <label for="produto">Tipo do Produto:</label>
+            <select id="produto" name="tipo" required>
+                <option value="">Selecionar Produto</option>
+                <option value="pote-sorvete-2l">Potes Sorvetes 2 Litros</option>
+                <option value="pote-sorvete-1-5l">Potes Sorvetes 1,5 Litros</option>
+                <option value="pote-acai">Pote de Açaí 1,5 Litros</option>
+                <option value="picolé-leite">Picolé ao Leite</option>
+                <option value="picolé-fruta">Picolé de Fruta</option>
+                <option value="picole-skimo">Picolé Skimo</option>
+                <option value="picolé-moreninha">Picolé Moreninha</option>
+                <% tipoProdutos.forEach(tipo=> { %>
+                    <option value="<%= tipo.nome %>">
+                        <%= tipo.nome %>
+                    </option>
+                    <% }); %>
+            </select>
+    
+            <div class="cadastro-tipo">
+                <button type="submit"><a href="/cadastroTipo" id="botao">Cadastrar Tipo</a></button>
+            </div>
+    
+            <label for="sabor">Sabor:</label>
+            <input type="text" id="sabor" name="sabor" required>
+    
+            <label for="estoque">Quantidade em Estoque:</label>
+            <input type="number" id="estoque" name="estoque" required>
+    
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+    
+            <label for="preco">Preço:</label>
+            <input type="number" id="preco" name="preco" step="0.01" required>
+    
+            <label for="imagem">Imagem do Produto:</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*" required>
+    
+            <div class="buttons">
+                <button type="submit">Cadastrar Produto</button>
+                <button type="button"><a href="/" id="botao">Cancelar</a></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
