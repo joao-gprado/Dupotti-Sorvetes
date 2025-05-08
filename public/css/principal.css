@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+
+.container {
+    background-color: #610165;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sorvete {
+    transition: transform 0.3s ease;
+}
+
+.sorvete:hover {
+    transform: translateY(-10px); 
+}
+
+.introducao {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+    width: 81%;
+}
+
+.texto {
+    margin-top: 160px;
+    color: white;
+    flex: 0 0 35%;
+}
+
+.introducao h1 {
+    font-size: 65px;
+}
+
+.introducao h3 {
+    font-size: 30px;
+}
+
+.imagem img {
+    flex: 0 0 65%;
+    max-width: 1000px;
+    margin-bottom: -4px;
+}
+
+.section-corpo{
+    background-color: white;
+    gap: 0;
+}
+
+.corpo-1 {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    padding-top: 500px;
+    margin-bottom: 275px;
+}
+
+.corpo-1-texto{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    color: #2E2E2E;
+    margin-left: 100px;
+}
+
+#imagem-entrega{
+    margin-left: 75px;
+}
+
+.corpo-1-texto a{
+    border: 1px solid #EF8812;
+    background-color: #EF8812;
+    color: white;
+    border-radius: 30px;
+    height: 50px;
+    width: 225px;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.corpo-1-texto a:hover{
+    background-color: #610165;
+    border: 1px solid #610165;
+}
+
+.corpo-1, .corpo-2{
+    display: flex;
+    align-items: center;
+}
+
+.corpo-2{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+}

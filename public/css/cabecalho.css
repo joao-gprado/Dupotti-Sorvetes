@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+
+header{
+    /* background-color: #38013a; */
+    /* background-color: #610165; */
+    background-color: #38013a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 150px 25px 0px;
+    border-bottom: 1px solid white;
+}
+
+#logo{
+    max-width: 175px;
+    height: auto;
+    margin: 25px 0px 0px 175px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 50px;
+    font-size: larger;
+    transition: color 0.3s ease;
+    margin-top: 6px;
+}
+
+.nav-cabecalho{
+    margin-right: 75px;
+    margin-top: 15px;
+    display: flex;
+}
+
+nav a:hover{
+    color: #EF8812;
+}
+
+.botao-login{
+    margin-right: 0px;
+}
+
+.botao-login a{
+    margin-left: 100px;
+    margin-right: -25px;
+    border: #EF8812;
+    background-color: #EF8812;
+    border-radius: 30px;
+    height: 35px;
+    width: 115px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-login a:hover{
+    color: #38013a;
+}
+
+.botao-cadastro{
+    margin-left: 75px;
+}
+
+.botao-cadastro a{
+    margin-right: -125px;
+    border: #EF8812;
+    background-color: #EF8812;
+    border-radius: 30px;
+    height: 35px;
+    width: 115px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-cadastro a:hover{
+    color: #38013a;
+}
+
+.usuario-texto{
+    text-decoration: none;
+    color: #EF8812;
+    font-weight: bold;
+    margin-left: 50px;
+    font-size: 26px;
+    transition: color 0.3s ease;
+}
+
+.usuario-texto a{
+    text-decoration: none;
+    color: #EF8812;
+    font-weight: bold;
+    font-size: 26px;
+    margin-right: 0px;
+}
+
+.usuario-texto a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    transform: scaleX(0);
+}

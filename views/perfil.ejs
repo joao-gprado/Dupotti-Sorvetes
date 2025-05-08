@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="/css/perfil.css"> 
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+
+    <h2 class="titulo-perfil">Perfil de <%= usuario %></h2>
+
+    <div class="container mt-5">
+
+
+        <div class="card mt-3">
+            <div class="card-body">
+                <p><strong>Nome de Usuário:</strong> <%= usuario %></p>
+                <p><strong>Email:</strong> <%= email %></p>
+                <a href="/" class="btn btn-primary mt-3">Voltar para Home</a>
+            </div>
+        </div>
+    </div>
+
+    <%- include ('./partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pagina {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.fundo-desfocado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("https://i.ibb.co/PGn8L22/dupotti-Sorvetes-IMG.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.left-side {
+    flex: 1;
+    background-color: transparent;
+}
+
+.container-cadastro {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.card-cadastro {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco com opacidade */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    border-radius: 20px;
+}
+
+.card-cadastro h2 {
+    color: #800080;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.formulario {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.btn-register {
+    background-color: #800080;
+    color: #fff;
+    padding: 10px;
+}
+
+.btn-register:hover {
+    background-color: #993399;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .left-side {
+        display: none;
+    }
+    
+    .container-cadastro {
+        width: 100%;
+        padding: 0;
+    }
+
+    .card-cadastro {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-cadastro {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .form-control {
+        padding: 8px;
+    }
+
+    .btn-register {
+        padding: 8px;
+    }
+}
